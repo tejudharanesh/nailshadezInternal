@@ -2,7 +2,7 @@
 const CACHE_NAME = `your-app-cache-v1`;
 
 // Files to pre-cache (static assets)
-const FILES_TO_CACHE = ["/offline.html", "/manifest.json", "/logo.png"];
+const FILES_TO_CACHE = ["/offline.html", "/manifest.json", "/habi_logo.png"];
 
 // Install event: Pre-cache static assets
 self.addEventListener("install", (event) => {
@@ -55,22 +55,4 @@ self.addEventListener("fetch", (event) => {
       );
     })
   );
-});
-
-// Activate event: Clean up old caches
-self.addEventListener("activate", (event) => {
-  console.log("Service Worker activating...");
-  event.waitUntil(
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log("Deleting old cache:", cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      )
-    )
-  );
-  self.clients.claim();
 });

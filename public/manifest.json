@@ -1,14 +1,14 @@
 {
-  "short_name": "nailshadez internal",
-  "name": "bookings nailshadez",
+  "short_name": "Bookings",
+  "name": "Bookings",
   "icons": [
     {
-      "src": "icons/android-icon-192x192.png",
+      "src": "icons/icon.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icons/android-icon-192x192.png",
+      "src": "icons/icon.jpg",
       "type": "image/png",
       "sizes": "192x192"
     }
