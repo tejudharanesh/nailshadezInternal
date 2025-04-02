@@ -24,7 +24,9 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/bookings");
+        const res = await axios.get(
+          "https://nailshadezserver.onrender.com/api/bookings"
+        );
         setBookings(res.data.bookings);
       } catch (error) {
         console.error("Error fetching bookings", error);
@@ -36,9 +38,12 @@ const Hero: React.FC = () => {
 
   const updateStatus = async (bookingId: string, newStatus: BookingStatus) => {
     try {
-      await axios.patch(`http://localhost:5000/api/bookings/${bookingId}`, {
-        status: newStatus,
-      });
+      await axios.patch(
+        `https://nailshadezserver.onrender.com/api/bookings/${bookingId}`,
+        {
+          status: newStatus,
+        }
+      );
       setBookings((prev) =>
         prev.map((booking) =>
           booking._id === bookingId
