@@ -1,0 +1,20 @@
+{
+  "short_name": "nailshadez internal",
+  "name": "bookings nailshadez",
+  "icons": [
+    {
+      "src": "icons/android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
